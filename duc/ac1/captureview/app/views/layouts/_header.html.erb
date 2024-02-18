@@ -1,0 +1,76 @@
+<nav class="header">
+  <div class="container">
+    <%=
+      link_to root_path, class: 'brand' do
+        app_name = content_tag :span, @tenant.site_name
+        logo = image_tag(@tenant.site_logo ? @tenant.site_logo : "", class: 'logo')
+
+        if @tenant_setting.brand_display == "name_and_logo"
+          logo + app_name
+        elsif @tenant_setting.brand_display == "name_only"
+          app_name
+        elsif @tenant_setting.brand_display == "logo_only"
+          logo
+        end
+      end
+    %>
+
+    <button
+      class="navbarToggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="boardsNav">
+        <% if @tenant_setting.show_roadmap_in_header %>
+          <li class="nav-item<%= (current_page?(roadmap_path) or (@tenant_setting.root_board_id == 0 and current_page?(root_path))) ? ' active' : '' %>">
+            <%= link_to "Roadmap", roadmap_path, class: 'nav-link' %>
+          </li>
+        <% end %>
+        
+        <% if (user_signed_in?) then %>
+          <div id="boards_nav_section">
+            <%= render 'layouts/boards_nav_section', boards: @boards unless @boards.nil? %>
+          </div>
+        <% end %>
+      </ul>
+
+      <ul class="profileNav">
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <a class="profileToggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= image_tag(current_user.gravatar_url, class: 'gravatar', alt: current_user.full_name, size: 24) %>
+              <span class="fullname"><%= current_user.full_name %></span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <% if current_user.moderator? %>
+                <%=
+                  link_to t('header.menu.site_settings'),
+                    current_user.admin? ? site_settings_general_path : site_settings_users_path,
+                    class: 'dropdown-item'
+                %>
+                <div class="dropdown-divider"></div>
+              <% end %>
+
+              <%= link_to t('header.menu.profile_settings'), edit_user_registration_path, class: 'dropdown-item' %>
+              <div class="dropdown-divider"></div>
+
+              <%= button_to t('header.menu.sign_out'), destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to t('header.log_in'), new_user_session_path, class: 'nav-link' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

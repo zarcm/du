@@ -1,0 +1,26 @@
+version: '3.4'
+services:
+  db:
+    image: postgres:14.5
+    environment:
+      POSTGRES_USER: captureview
+      POSTGRES_PASSWORD: dbpass
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    environment:
+      POSTGRES_USER: captureview
+      POSTGRES_PASSWORD: dbpass
+      BASE_URL: http://localhost:3000
+      SECRET_KEY_BASE: secretkeybasehere
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    
+volumes:
+  dbdata:

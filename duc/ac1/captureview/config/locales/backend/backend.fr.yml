@@ -1,0 +1,110 @@
+fr:
+  errors:
+    unknown: 'An unknown error occurred'
+    unauthorized: 'Vous n’êtes pas autorisé'
+    not_logged_in: 'Vous devez être connecté pour accéder à cette page'
+    not_enough_privileges: 'Vous n''avez pas les privilèges pour accéder à cette page'
+    user_blocked_or_deleted: 'Vous ne pouvez pas accéder à votre compte parce qu''il a été bloqué ou supprimé.'
+    o_auth_login_error: 'There was an error logging in with %{name}. Please contact the site administrator or try a different provider.'
+    board:
+      update_order: 'Il y a eu une erreur dans la réorganisation des panneaux'
+    post_status:
+      update_order: 'Il y a eu une erreur dans la réorganisation des statuts'
+  defaults:
+    user_full_name: 'Anonymous User'
+  mailers:
+    devise:
+      welcome_greeting: 'Bienvenue sur %{site_name}, %{email} !'
+      opening_greeting: 'Bonjour %{email} !'
+      confirmation_instructions:
+        body: 'Vous pouvez confirmer l''email de votre compte en cliquant sur le lien ci-dessous :'
+        action: 'Confirmer mon compte'
+      email_changed:
+        body: "Nous vous contactons pour vous informer que votre adresse e-mail va être changée en %{email}."
+        body2: "Nous vous contactons pour vous informer que votre adresse électronique a été changée en %{email}."
+      password_change:
+        body: "Nous vous contactons pour vous informer que votre mot de passe a été modifié."
+      reset_password:
+        body: 'Quelqu''un a demandé un lien pour changer votre mot de passe. Vous pouvez le faire en cliquant sur le lien ci-dessous.'
+        body2: "Si vous ne l'avez pas demandé, veuillez ignorer cet e-mail."
+        body3: "Votre mot de passe ne changera pas tant que vous n'aurez pas accédé au lien ci-dessus et créé un nouveau mot de passe."
+        action: 'Changer mon mot de passe'
+    user:
+      opening_greeting: 'Bonjour !'
+      closing_greeting: 'Passez une bonne journée !'
+      learn_more: 'Cliquez ici pour en savoir plus'
+      unsubscribe: 'Inutile ? Vous pouvez désactiver les notifications ici'
+      notify_post_owner:
+        subject: '%{app_name} Nouveau commentaire sur %{post}'
+        body: 'Il y a un nouveau commentaire de %{user} sur votre publication %{post}'
+      notify_comment_owner:
+        subject: '%{app_name} Nouvelle réponse à votre commentaire de %{post}'
+        body: 'Il y a une nouvelle réponse de %{user} sur votre commentaire du post %{post}'
+      notify_followers_of_post_update:
+        subject: '%{app_name} Nouvelle mise à jour pour la publication %{post}'
+        body: "Il y a une nouvelle mise à jour sur la publication que vous suivez %{post}"
+      notify_followers_of_post_status_change:
+        subject: '[%{app_name}] Changement de statut sur la publication %{post}'
+        body: "La publication que vous suivez %{post} a un nouveau statut"
+  activerecord:
+    attributes:
+      board:
+        name: 'Nom'
+        description: 'Description'
+        order: 'Ordre'
+      comment:
+        body: 'Corps'
+        is_post_update: 'Publication mise à jour'
+        user_id: 'Auteur'
+        post_id: 'Publication'
+        parent_id: 'Commentaire parent'
+      follow:
+        user_id: 'Utilisateur'
+        post_id: 'Publication'
+      like:
+        user_id: 'Utilisateur'
+        post_id: 'Publication'
+      o_auth:
+        name: 'Nom'
+        logo: 'Logo'
+        is_enabled: 'Enabled'
+        client_id: 'Client ID'
+        client_secret: 'Client secret'
+        authorize_url: 'Authorize URL'
+        token_url: 'Token URL'
+        profile_url: 'Profile URL'
+        scope: 'Scope'
+        json_user_name_path: 'JSON path to user name'
+        json_user_email_path: 'JSON path to user email'
+      post_status:
+        name: 'Nom'
+        color: 'Couleur '
+        order: 'Ordre'
+        show_in_roadmap: 'Voir dans la feuille de route'
+      post:
+        title: 'Titre'
+        description: 'Description'
+        board_id: 'Tableau des publications'
+        user_id: 'Auteur de la publication'
+        post_status_id: 'Statut de la publication'
+      tenant:
+        site_name: 'Nom du site'
+        site_logo: 'Logo du site'
+        subdomain: 'Sous-domaine'
+        locale: 'Langue'
+        brand_setting: 'Afficher'
+      user:
+        email: 'Email'
+        full_name: 'Nom complet'
+        password: 'Mot de passe'
+        password_confirmation: 'Confirmer le mot de passe'
+        role: 'Rôle'
+        notifications_enabled: 'Notifications activées'
+    errors:
+      messages:
+        invalid: 'est invalide'
+        required: 'est obligatoire'
+        blank: 'ne peut pas être vide'
+        taken: 'est déjà utilisé'
+        too_short: 'est trop court (au moins %{count} caractères)'
+        too_long: 'is too long (maximum %{count} characters)'

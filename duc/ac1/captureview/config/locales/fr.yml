@@ -1,0 +1,204 @@
+fr:
+  common:
+    validations:
+      required: '%{attribute} is required'
+      email: 'Invalid email'
+      url: 'Invalid URL'
+      password: 'Password must have at least %{n} characters'
+      password_mismatch: 'Password and password confirmation must match'
+    forms:
+      auth:
+        email: 'Email'
+        full_name: 'Nom complet'
+        password: 'Mot de passe'
+        password_confirmation: 'Confirmer le mot de passe'
+        new_password: 'Nouveau mot de passe'
+        new_password_confirmation: 'Confirmer le nouveau mot de passe'
+        current_password: 'Mot de passe actuel'
+        notifications_enabled: 'Notifications activées'
+        notifications_enabled_help: "si désactivé, vous ne recevrez aucune notification"
+        remember_me: 'Se souvenir de moi'
+        log_in: 'Se connecter'
+        sign_up: 'S''inscrire'
+        log_in_with: 'Log in with %{o_auth}'
+        sign_up_with: 'Sign up with %{o_auth}'
+        profile_settings: 'Paramètres du profil'
+        update_profile: 'Mettre à jour le profil'
+        cancel_account: 'Annuler le compte'
+        forgot_password: 'Mot de passe oublié ?'
+        confirmation_instructions_not_received: "Vous n'avez pas reçu le mail de confirmation ?"
+        unlock_instructions_not_received: "Vous n'avez pas reçu le mail de déverrouillage ?"
+        send_reset_password_instructions: 'Envoyez-moi les instructions de réinitialisation du mot de passe'
+        resend_confirmation_instructions: 'Renvoyer les instructions de confirmation'
+        resend_unlock_instructions: 'Renvoyer les instructions de déverrouillage'
+        change_password: 'Changer le mot de passe'
+        password_help: '%{count} caractères minimum'
+    comments_number:
+      one: '1 commentaire'
+      other: '%{count} commentaires'
+    no_status: 'Pas de statut'
+    loading: 'Chargement ...'
+    confirmation: 'Vous êtes sûr ?'
+    unsaved_changes: 'Unsaved changes will be lost if you leave the page.'
+    edited: 'Modifié'
+    enabled: 'Enabled'
+    disabled: 'Disabled'
+    copied: 'Copied!'
+    buttons:
+      new: 'Nouveau'
+      edit: 'Modifier'
+      delete: 'Supprimer'
+      cancel: 'Annuler'
+      create: 'Créer'
+      update: 'Sauvegarder'
+      confirm: 'Confirmer'
+      back: 'Back'
+      test: 'Test'
+    datetime:
+      now: 'à l’instant'
+      minutes:
+        one: 'Il y a 1 minute'
+        other: 'Il y a %{count} minutes'
+      hours:
+        one: 'Il y a 1 heure'
+        other: 'Il y a %{count} heures'
+      days:
+        one: 'Il y a 1 jour'
+        other: 'il y a %{count} jours'
+  signup:
+    page_title: 'Créez votre espace de feedback'
+    step1:
+      title: '1. Créer un compte utilisateur'
+      email_auth: 'S´inscrire avec une adresse e-mail'
+    step2:
+      title: '2. Créer un espace de feedback'
+      create_button: 'Créer un espace de feedback'
+      validations:
+        subdomain_already_taken: 'Désolé, ce sous-domaine n''est pas disponible'
+    step3:
+      title: "Vous avez presque terminé !"
+      message: "Vérifiez votre e-mail %{email} pour activer votre nouvel espace de feedback %{subdomain}!"
+  header:
+    menu:
+      site_settings: 'Paramètres du site'
+      profile_settings: 'Paramètres du profil'
+      sign_out: 'Déconnexion'
+    log_in: 'Se connecter / S''inscrire'
+  roadmap:
+    title: 'Feuille de route'
+  pending_tenant:
+    title: 'Confirmez votre adresse e-mail'
+    message: 'Nous avons envoyé un e-mail avec un lien d''activation à l''e-mail que vous avez fourni lors de votre inscription. Cliquez sur ce lien pour activer cet espace de feedback !'
+  blocked_tenant:
+    title: 'Cet espace de feedback a été bloqué'
+  board:
+    new_post:
+      submit_button: 'Soumettre un retour'
+      cancel_button: 'Annuler'
+      login_button: 'Se connecter / S''inscrire'
+      title: 'Titre'
+      description: 'Description (optionnel)'
+      no_title: 'Le champ Titre est obligatoire'
+      submit_success: 'Feedback publié ! Vous allez bientôt être redirigé ...'
+      submit_error: 'Une erreur inconnue s''est produite, réessayez'
+    search_box:
+      title: 'Recherche'
+    filter_box:
+      title: 'Filtrer par statut'
+    posts_list:
+      empty: 'Il n''y a pas de publications'
+  post:
+    edit_button: 'Modifier'
+    published_by: 'Publié par'
+    post_status_select:
+      no_post_status: 'Aucun'
+    updates_box:
+      title: 'Mises à jour'
+      empty: 'Il n''y a pas encore de mise à jour'
+      status_change: 'a changé le statut en'
+    likes_box:
+      title: 'J''aime'
+      empty: 'Il n''y a pas encore de j''aime'
+    action_box:
+      title: 'Options'
+      follow_button: 'S''abonner à la publication'
+      following_description: "vous recevez des notifications sur les nouvelles mises à jour de ce poste"
+      not_following_description: "vous ne recevrez pas de notifications concernant cette publication"
+    comments:
+      title: 'Activité'
+      post_update_badge: 'Mettre à jour'
+      reply_button: 'Répondre'
+    new_comment:
+      body_placeholder: 'Laisser un commentaire'
+      submit_button: 'Soumettre'
+      is_post_update: 'Marquer comme mise à jour'
+      user_notification: 'Les utilisateurs qui suivent cette publication seront avertis'
+      not_logged_in: 'Vous devez être connecté pour poster des commentaires'
+  site_settings:
+    menu:
+      title: 'Paramètres du site'
+      general: 'Général'
+      boards: 'Tableaux'
+      post_statuses: 'Statuts'
+      roadmap: 'Feuille de route'
+      users: 'Utilisateur·rice·s'
+      authentication: 'Authentication'
+    info_box:
+      up_to_date: 'Toutes les modifications ont été enregistrées'
+      error: 'Une erreur s''est produite : %{message}'
+      dirty: 'Modifications non enregistrées'
+    general:
+      title: 'Général'
+      brand_setting_both: 'Le nom et le logo'
+      brand_setting_name: 'Nom seulement'
+      brand_setting_logo: 'Logo uniquement'
+      brand_setting_none: 'Aucun'
+    boards:
+      title: 'Tableaux'
+      empty: 'Il n''y a pas de tableaux. Créez en un ci-dessous!'
+      new: 'Nouveau'
+      form:
+        name: 'Nom du tableau'
+        description: 'Description de du tableau (facultatif)'
+    post_statuses:
+      title: 'Statuts'
+      empty: 'Il n''y a pas de statuts. Créez en un ci-dessous!'
+      new: 'Nouveau'
+      form:
+        name: 'Nom du statut'
+    roadmap:
+      title: 'Feuille de route'
+      title2: 'Pas dans la feuille de route'
+      empty: 'La feuille de route est vide.'
+      help: 'Vous pouvez ajouter des statuts à la feuille de route en les faisant glisser depuis la section ci-dessous. Si vous voulez plutôt créer un nouveau statut ou modifier leur commande, allez dans Paramètres du site > Statuts.'
+    users:
+      title: 'Utilisateur·rice·s'
+      block: 'Bloquer'
+      unblock: 'Débloquer'
+      block_confirmation: "%{name} ne pourra pas se connecter tant qu'il ne sera pas débloqué. Êtes-vous sûr(e) ?"
+      unblock_confirmation: "%{name} sera en mesure de se connecter et de soumettre des commentaires. Vous êtes sûr ?"
+      role_to_admin_confirmation: "%{name} aura les mêmes privilèges que vous, et pourra même vous rétrograder ou vous bloquer. Ne continuez que si vous avez vraiment confiance en %{name}. Vous êtes sûr ?"
+      role_user: 'Utilisateur'
+      role_moderator: 'Modérateur'
+      role_admin: 'Administrateur'
+      status_active: 'Actif'
+      status_blocked: 'Bloqué'
+      status_deleted: 'Supprimé'
+    authentication:
+      title: 'Authentication'
+      oauth_subtitle: 'OAuth providers'
+      copy_url: 'Copy URL'
+      test_page:
+        title: '%{name} OAuth test results'
+        fetched_user_data: 'Fetched user data'
+        found: 'Found'
+        summary: 'Summary'
+        valid_configuration: 'This OAuth provider is configured correctly!'
+        warning_configuration: 'This OAuth provider is configured correctly, but a default name for users (%{name}) will be used.'
+        invalid_configuration: 'This OAuth provider is NOT configured correctly.'
+      form:
+        title_new: 'New OAuth provider'
+        title_edit: 'Edit OAuth provider'
+        subtitle_oauth_config: 'OAuth configuration'
+        subtitle_user_profile_config: 'User profile configuration'
+        client_secret_help: 'hidden for security purposes'
